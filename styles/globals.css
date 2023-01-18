@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+  font-family: 'Inter', sans-serif;
+}
+
 .bandera-colombia {
     width: 90%;
     max-width: 25px;
@@ -11,30 +20,19 @@
     cursor: pointer;
   }
 
-  .bg-rojo-tyt{
-    background-color: #ff004a;
-  }
+ 
+.hvr-grow {
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  transition-duration: 0.9s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+  -webkit-transform: scale(0.9);
+  transform: scale(0.9);
+}
 
-  .bg-azul-tyt{
-    background-color: #008b8a;
-  }
-
-  .bg-amarillo-tyt{
-    background-color: #ffd800;
-  }
-
-  .bg-orange-tyt{
-    background-color: #ff7500;
-  }
-  .bg-footer-tyt{
-    background-color: #f1f1f6;
-  }
-
-  .bg-azul-claro-tyt{
-    background-color: #b5dbdb;
-  }
 
   
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
