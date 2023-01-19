@@ -534,8 +534,39 @@ export default function Home() {
         </div>
         {/**end paginador slider  carrusel*/}
       </div>
-
       {/**End ofertas nacionales */}
+
+      {/**Porque reservar con tiquetes y tiquetes */}
+      <div className= "min-h-[512px] bg-[#F6F6F6] pt-12 px-24">
+        <div className="text-center text-[#323237] text-[20px] font-bold uppercase pb-20">
+          <p>¿Por qué reservar en tiqutes y tiquetes</p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-20">
+          <div className="flex flex-col justify-center items-center px-4">
+            <div className="h-[60px] w-[60px] flex items-center justify-center bg-[#FFCD31] rounded-full mb-8"></div>
+            <h2 className="uppercase text-[16px] text-[#126E6E] font-bold text-center mb-4">las mejores ofertas de viaje para ti</h2>
+            <p className="text-center text-[14px] text-[#323237]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptates omnis nostrum ut aliquam earum explicabo molestiae? Totam itaque molestias quo corporis accusantium</p>
+          </div>
+          <div className="flex flex-col justify-center items-center px-4">
+            <div className="h-[60px] w-[60px] flex items-center justify-center bg-[#FFCD31] rounded-full mb-8"></div>
+            <h2 className="uppercase text-[16px] text-[#126E6E] font-bold text-center mb-6">100% confiables</h2>
+            <p className="text-center text-[14px] text-[#323237]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptates omnis nostrum ut aliquam earum explicabo molestiae? Totam itaque molestias quo corporis accusantium</p>
+          </div>
+          <div className="flex flex-col justify-center items-center px-4">
+            <div className="h-[60px] w-[60px] flex items-center justify-center bg-[#FFCD31] rounded-full mb-8"></div>
+            <h2 className="uppercase text-[16px] text-[#126E6E] font-bold text-center mb-4">Los mejores planes en un solo lugar</h2>
+            <p className="text-center text-[14px] text-[#323237]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptates omnis nostrum ut aliquam earum explicabo molestiae? Totam itaque molestias quo corporis accusantiu</p>
+          </div>
+        </div>
+
+      </div>
+      {/**end Porque reservar con tiquetes y tiquetes */}
+
+      {/**Section Slider de aerolineas */}
+      {/**End section Slider de aerolineas */}
+
+
+
 
 
       
