@@ -39,3 +39,15 @@ html{
   transform: rotate(180deg) !important;
 }
 
+
+::-webkit-scrollbar{
+  width: 11px;
+  background-color: #F5F5F5;
+}
+::-webkit-scrollbar-track{
+  background-color:#126e6e11;
+}
+::-webkit-scrollbar-thumb{
+  border-radius: 5px;
+  background-color: #EF4060;
+}

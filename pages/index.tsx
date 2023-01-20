@@ -650,6 +650,7 @@ export default function Home() {
             </svg>
           </div>
           {/**end icono angle-left */}
+
           {/**Slider imagenes aerolineas */}
           <div className="flex items-center gap-10">
             <div className="w-[120px]">
@@ -666,8 +667,7 @@ export default function Home() {
             </div>
             <div className="w-[150px]">
               <img src="static/aerolineas/AF.png" alt="avianca" />
-            </div>
-            
+            </div>            
           </div>
           {/**End Slider imagenes aerolineas */}
 
@@ -724,11 +724,92 @@ export default function Home() {
           </div> {/**end icono angle-rigth */}
         </div>
         {/**end Slider de aerolineas */}
+      </section>{/** End Section Slider de aerolineas */}
 
-        <div></div>
+      {/**Section como comprar tiquetes */}
+      <section className="bg-[#BCD9D9] min-h-[500px] mt-[50px] pt-[50px] px-16 relative">
+        <div className="">
+          <h1 className="uppercase text-[#323237] text-[24px] font-bold">¿Cómo comprar en tiquetes y tiquetes?</h1>
+        </div>
+        <div className="grid grid-cols-5 gap-20 pt-[55px]">
+          <div>
+            <div className="bg-white rounded-md h-[288px] w-[220px] overflow-hidden ">
+              <div className="bg-[#F8F8F8] w-[47px] h-[66px] text-[28px] font-semibold text-[#323237 flex justify-center pt-[14px]">1.</div>
+              <div className="flex justify-center items-center">
+                <img src="static/icons/icon-1.svg"/>
+              </div>
+              <div className="text-[12px] text-[#323237] pt-8 px-4 ">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore molestiae aspernatur repellendus!
+              </div>
+            </div>
+          </div>
+          <div>
+            <div className="bg-white rounded-md h-[288px] w-[220px] overflow-hidden ">
+              <div className="bg-[#F8F8F8] w-[47px] h-[66px] text-[28px] font-semibold text-[#323237 flex justify-center pt-[14px]">2.</div>
+              <div className="flex justify-center items-center">
+                <img src="static/icons/icon-2.svg"/>
+              </div>
+              <div className="text-[12px] text-[#323237] pt-8 px-4 ">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore molestiae aspernatur repellendus!
+              </div>
+            </div>
+          </div>
+          <div>
+            <div className="bg-white rounded-md h-[288px] w-[220px] overflow-hidden ">
+              <div className="bg-[#F8F8F8] w-[47px] h-[66px] text-[28px] font-semibold text-[#323237 flex justify-center pt-[14px]">3.</div>
+              <div className="flex justify-center items-center">
+                <img src="static/icons/icon-3.svg"/>
+              </div>
+              <div className="text-[12px] text-[#323237] pt-8 px-4 ">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore molestiae aspernatur repellendus!
+              </div>
+            </div>
+          </div>
+          <div>
+            <div className="bg-white rounded-md h-[288px] w-[220px] overflow-hidden ">
+              <div className="bg-[#F8F8F8] w-[47px] h-[66px] text-[28px] font-semibold text-[#323237 flex justify-center pt-[14px]">4.</div>
+              <div className="flex justify-center items-center">
+                <img src="static/icons/icon-4.svg"/>
+              </div>
+              <div className="text-[12px] text-[#323237] pt-8 px-4 ">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore molestiae aspernatur repellendus!
+              </div>
+            </div>
+          </div>
+         
+          <div className="">          
+          </div>
+        </div>
+        <div className="absolute bottom-[-18px] right-0">
+          <img className="" src="static/img/home/section-compra-mujer.svg" alt="compra" />
+        </div>
+
+      </section>{/** End Section como comprar tiquetes */}
+
+      {/**Section */}
+      <section className="bg-white py-20 h-[380px]">
+        <div className="text-center px-96">
+          <h1 className="text-[#323237] text-[24px] font-bold leading-[26px]">
+          No te pierdas la oportunidad de viajar con nuestras promociones a cualquier destino
+          </h1>
+        </div>
+        <div className="flex justify-center items-center my-10 gap-[16px]">
+          <div>
+            <input className="w-[488px] h-[48px] rounded-md border-transparent bg-[#F1F2F6] focus:outline-none focus:border-[#EF4060] focus:ring-[#EF4060] px-4 " type="text" placeholder="Ingresa tu email" />           
+          </div>
+          <div>
+            <button className="flex justify-center  items-center bg-[#EF4060] text-white rounded-md h-[48px] w-[173px] hv font-medium hvr-grow">Suscribirme
+            </button>            
+          </div>
+
+        </div>
+        <div className="text-center px-10">
+          <p className="text-[14px]">Recibirás emails promocionales de Tiquetes y Tiquetes. Para más información consulta</p>
+          <a className=" text-[#EF4060] text-[14px] decoration-1 text-[14px]" href="http://">las políticas de privacidad.</a>
+          </div>
       </section>
+      
 
-      {/**End section Slider de aerolineas */}
     </div>
   );
 }

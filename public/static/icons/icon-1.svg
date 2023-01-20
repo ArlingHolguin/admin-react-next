@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="80" viewBox="0 0 80 80">
+  <defs>
+    <clipPath id="clip-path">
+      <path id="Trazado_1780" data-name="Trazado 1780" d="M0,0H46.325V46.325H0Z" fill="#ff7d01"/>
+    </clipPath>
+  </defs>
+  <g id="Grupo_1740" data-name="Grupo 1740" transform="translate(-170 -2337)">
+    <circle id="Elipse_24" data-name="Elipse 24" cx="40" cy="40" r="40" transform="translate(170 2337)" fill="#ffead6"/>
+    <g id="ic_flight_takeoff_24px" transform="matrix(0.966, -0.259, 0.259, 0.966, 182, 2360.99)">
+      <g id="Grupo_39" data-name="Grupo 39" clip-path="url(#clip-path)">
+        <path id="Trazado_1779" data-name="Trazado 1779" d="M3.114,33.353H39.788v3.86H3.114ZM40.889,15.286a2.889,2.889,0,0,0-3.552-2.046l-10.25,2.741L13.769,3.57l-3.725.984,7.991,13.84L8.441,20.961l-3.8-2.973-2.8.753,3.513,6.1,1.486,2.567,3.088-.83,10.25-2.741,8.4-2.239,10.25-2.741a2.938,2.938,0,0,0,2.065-3.571Z" transform="translate(1.712 3.321)" fill="#ff7d01"/>
+      </g>
+      <g id="Grupo_40" data-name="Grupo 40" clip-path="url(#clip-path)">
+        <path id="Trazado_1781" data-name="Trazado 1781" d="M0,0H46.325V46.325H0Z" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>
