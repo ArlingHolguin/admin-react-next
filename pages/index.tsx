@@ -374,21 +374,19 @@ export default function Home() {
                 </p>
                 <div className="flex justify-between items-center">
                   <div>
-                  <input
-                    className="w-full rounded-md border-gray-200 bg-gray-200 text-[17px] text-[#707070] outline-none tracking-[0.13px]"
-                    type="text"
-                    placeholder="Ida"
-                  />
-
+                    <input
+                      className="w-full rounded-md border-gray-200 bg-gray-200 text-[17px] text-[#707070] outline-none tracking-[0.13px]"
+                      type="text"
+                      placeholder="Ida"
+                    />
                   </div>
                   <div>|</div>
                   <div className="flex justify-end ml-4">
-                  <input
-                    className="w-full rounded-md border-gray-200 bg-gray-200 text-[17px] text-[#707070] outline-none tracking-[0.13px]"
-                    type="text"
-                    placeholder="Vuelta"
-                  />
-
+                    <input
+                      className="w-full rounded-md border-gray-200 bg-gray-200 text-[17px] text-[#707070] outline-none tracking-[0.13px]"
+                      type="text"
+                      placeholder="Vuelta"
+                    />
                   </div>
                 </div>
               </div>
@@ -402,10 +400,9 @@ export default function Home() {
                   Pasajeros
                 </p>
                 <div className="flex">
-                  <span
-                    className="w-full rounded-md border-gray-200 bg-gray-200 text-[17px] text-[#707070] outline-none tracking-[0.13px]">
-                      1 Persona
-                    </span>
+                  <span className="w-full rounded-md border-gray-200 bg-gray-200 text-[17px] text-[#707070] outline-none tracking-[0.13px]">
+                    1 Persona
+                  </span>
                 </div>
               </div>
             </div>
@@ -413,9 +410,7 @@ export default function Home() {
             <div>
               {/* boton buscar*/}
               <div className="flex justify-center items-center bg-[#298787] rounded-lg p-2 ml-2 w-[173px] h-[48px] cursor-pointer hvr-grow border border-transparent hover:bg-[#054141]">
-                <p className="text-[#ffffff] text-[16px]">
-                  Buscar
-                </p>                
+                <p className="text-[#ffffff] text-[16px]">Buscar</p>
               </div>
               {/*end boton buscar*/}
             </div>
@@ -430,101 +425,112 @@ export default function Home() {
             alt=""
           />
         </div>
-      </div>{/**End motor de busqueda */}
+      </div>
+      {/**End motor de busqueda */}
 
       {/**ofertas nacionales */}
       <div className="bg-white py-6 px-12">
         <div className="mb-1">
-          <p className="uppercase text-[22px] text-[#323237] font-bold">Ofertas Nacionales</p>
+          <p className="uppercase text-[22px] text-[#323237] font-bold">
+            Ofertas Nacionales
+          </p>
         </div>
         <div className="flex items-center gap-8">
           {/**Card promo 1*/}
           <div className="w-[380px]">
-              <div className=" relative bg-white rounded-lg overflow-hidden mb-10 shadow-md ">
-                
-                <img className="w-full h-[253px] object-cover object-center"
-                    src="https://images.pexels.com/photos/8156202/pexels-photo-8156202.jpeg?auto=compress&cs=tinysrgb&w=400"
-                    alt="image"/>
-                    <div className="absolute top-0 w-[380px] h-[253px] bg-gradient-to-t from-[#040404c9] via-purple-[#59595990] to-[#F1F1F100] "></div>
-                    <div className="absolute top-4 right-4 z-50 flex justify-center items-center font-semibold h-[25px] w-[141px] uppercase bg-[#FFCD31] rounded-[4px] text-[10px]">
-                  oferta destacada
+            <div className=" relative bg-white rounded-lg overflow-hidden mb-10 shadow-md ">
+              <img
+                className="w-full h-[253px] object-cover object-center"
+                src="https://images.pexels.com/photos/8156202/pexels-photo-8156202.jpeg?auto=compress&cs=tinysrgb&w=400"
+                alt="image"
+              />
+              <div className="absolute top-0 w-[380px] h-[253px] bg-gradient-to-t from-[#040404c9] via-purple-[#59595990] to-[#F1F1F100] "></div>
+              <div className="absolute top-4 right-4 z-50 flex justify-center items-center font-semibold h-[25px] w-[141px] uppercase bg-[#FFCD31] rounded-[4px] text-[10px]">
+                oferta destacada
+              </div>
+              <div className="absolute bottom-24 left-4 text-white z-50">
+                <p className="text-[14px]">Vuelos</p>
+                <p className="text-[20px] font-bold">Cali - San Andrés</p>
+              </div>
+              <div className=" flex items-center justify-between p-[16px]">
+                <div className="">
+                  <p className="text-[12px] font-normal -mb-2">Desde</p>
+                  <span className="text-[22px] font-medium uppercase">
+                    $ 283.600 cop
+                  </span>
+                  <p className="text-[10px] font-normal -mt-2">Por trayecto</p>
                 </div>
-                <div className="absolute bottom-24 left-4 text-white z-50">
-                    <p className="text-[14px]">Vuelos</p>
-                    <p className="text-[20px] font-bold">Cali - San Andrés</p>                
-                </div>
-                <div className=" flex items-center justify-between p-[16px]">
-                  <div className="">
-                    <p className="text-[12px] font-normal -mb-2">Desde</p>
-                    <span className="text-[22px] font-medium uppercase">$ 283.600 cop</span>
-                    <p className="text-[10px] font-normal -mt-2">Por trayecto</p>
-                  </div>
-                  <div className="flex justify-center items-center rounded-[8px] text-[14px] font-medium h-[48px] w-[142px] bg-[#EF4060] text-white cursor-pointer hvr-grow">
-                    Ver oferta
-                  </div>
+                <div className="flex justify-center items-center rounded-[8px] text-[14px] font-medium h-[48px] w-[142px] bg-[#EF4060] text-white cursor-pointer hvr-grow">
+                  Ver oferta
                 </div>
               </div>
-          </div> 
+            </div>
+          </div>
           {/**end Card promo 1*/}
 
           {/**Card promo 2*/}
           <div className="w-[380px]">
-              <div className=" relative bg-white rounded-lg overflow-hidden mb-10 shadow-md ">
-                
-                <img className="w-full h-[253px] object-cover object-center"
-                    src="https://images.pexels.com/photos/15022214/pexels-photo-15022214.jpeg?auto=compress&cs=tinysrgb&w=400"
-                    alt="image"/>
-                    <div className="absolute top-0 w-[380px] h-[253px] bg-gradient-to-t from-[#040404c9] via-purple-[#59595990] to-[#F1F1F100] "></div>
-                    <div className="absolute top-4 right-4 z-50 flex justify-center items-center font-semibold h-[25px] w-[141px] uppercase bg-[#FFCD31] rounded-[4px] text-[10px]">
-                  oferta destacada
+            <div className=" relative bg-white rounded-lg overflow-hidden mb-10 shadow-md ">
+              <img
+                className="w-full h-[253px] object-cover object-center"
+                src="https://images.pexels.com/photos/15022214/pexels-photo-15022214.jpeg?auto=compress&cs=tinysrgb&w=400"
+                alt="image"
+              />
+              <div className="absolute top-0 w-[380px] h-[253px] bg-gradient-to-t from-[#040404c9] via-purple-[#59595990] to-[#F1F1F100] "></div>
+              <div className="absolute top-4 right-4 z-50 flex justify-center items-center font-semibold h-[25px] w-[141px] uppercase bg-[#FFCD31] rounded-[4px] text-[10px]">
+                oferta destacada
+              </div>
+              <div className="absolute bottom-24 left-4 text-white z-50">
+                <p className="text-[14px]">Vuelos</p>
+                <p className="text-[20px] font-bold">Bogotá - Medellin</p>
+              </div>
+              <div className=" flex items-center justify-between p-[16px]">
+                <div className="">
+                  <p className="text-[12px] font-normal -mb-2">Desde</p>
+                  <span className="text-[22px] font-medium uppercase">
+                    $ 393.600 cop
+                  </span>
+                  <p className="text-[10px] font-normal -mt-2">Por trayecto</p>
                 </div>
-                <div className="absolute bottom-24 left-4 text-white z-50">
-                    <p className="text-[14px]">Vuelos</p>
-                    <p className="text-[20px] font-bold">Bogotá - Medellin</p>                
-                </div>
-                <div className=" flex items-center justify-between p-[16px]">
-                  <div className="">
-                    <p className="text-[12px] font-normal -mb-2">Desde</p>
-                    <span className="text-[22px] font-medium uppercase">$ 393.600 cop</span>
-                    <p className="text-[10px] font-normal -mt-2">Por trayecto</p>
-                  </div>
-                  <div className="flex justify-center items-center rounded-[8px] text-[14px] font-medium h-[48px] w-[142px] bg-[#EF4060] text-white cursor-pointer hvr-grow">
-                    Ver oferta
-                  </div>
+                <div className="flex justify-center items-center rounded-[8px] text-[14px] font-medium h-[48px] w-[142px] bg-[#EF4060] text-white cursor-pointer hvr-grow">
+                  Ver oferta
                 </div>
               </div>
-          </div> 
+            </div>
+          </div>
           {/**end Card promo 2*/}
 
           {/**Card promo 3*/}
           <div className="w-[380px]">
-              <div className=" relative bg-white rounded-lg overflow-hidden mb-10 shadow-md ">
-                
-                <img className="w-full h-[253px] object-cover object-center"
-                    src="https://images.pexels.com/photos/12813745/pexels-photo-12813745.jpeg?auto=compress&cs=tinysrgb&w=400"
-                    alt="image"/>
-                    <div className="absolute top-0 w-[380px] h-[253px] bg-gradient-to-t from-[#040404c9] via-purple-[#59595990] to-[#F1F1F100] "></div>
-                    <div className="absolute top-4 right-4 z-50 flex justify-center items-center font-semibold h-[25px] w-[141px] uppercase bg-[#FFCD31] rounded-[4px] text-[10px]">
-                  oferta destacada
+            <div className=" relative bg-white rounded-lg overflow-hidden mb-10 shadow-md ">
+              <img
+                className="w-full h-[253px] object-cover object-center"
+                src="https://images.pexels.com/photos/12813745/pexels-photo-12813745.jpeg?auto=compress&cs=tinysrgb&w=400"
+                alt="image"
+              />
+              <div className="absolute top-0 w-[380px] h-[253px] bg-gradient-to-t from-[#040404c9] via-purple-[#59595990] to-[#F1F1F100] "></div>
+              <div className="absolute top-4 right-4 z-50 flex justify-center items-center font-semibold h-[25px] w-[141px] uppercase bg-[#FFCD31] rounded-[4px] text-[10px]">
+                oferta destacada
+              </div>
+              <div className="absolute bottom-24 left-4 text-white z-50">
+                <p className="text-[14px]">Vuelos</p>
+                <p className="text-[20px] font-bold">Bogota - Cartagena</p>
+              </div>
+              <div className=" flex items-center justify-between p-[16px]">
+                <div className="">
+                  <p className="text-[12px] font-normal -mb-2">Desde</p>
+                  <span className="text-[22px] font-medium uppercase">
+                    $ 413.000 cop
+                  </span>
+                  <p className="text-[10px] font-normal -mt-2">Por trayecto</p>
                 </div>
-                <div className="absolute bottom-24 left-4 text-white z-50">
-                    <p className="text-[14px]">Vuelos</p>
-                    <p className="text-[20px] font-bold">Bogota - Cartagena</p>                
-                </div>
-                <div className=" flex items-center justify-between p-[16px]">
-                  <div className="">
-                    <p className="text-[12px] font-normal -mb-2">Desde</p>
-                    <span className="text-[22px] font-medium uppercase">$ 413.000 cop</span>
-                    <p className="text-[10px] font-normal -mt-2">Por trayecto</p>
-                  </div>
-                  <div className="flex justify-center items-center rounded-[8px] text-[14px] font-medium h-[48px] w-[142px] bg-[#EF4060] text-white cursor-pointer hvr-grow">
-                    Ver oferta
-                  </div>
+                <div className="flex justify-center items-center rounded-[8px] text-[14px] font-medium h-[48px] w-[142px] bg-[#EF4060] text-white cursor-pointer hvr-grow">
+                  Ver oferta
                 </div>
               </div>
-          </div> 
+            </div>
+          </div>
           {/**end Card promo 3*/}
-
         </div>
         {/**paginador slider  carrusel*/}
         <div className="flex justify-center items-center my-3 gap-2">
@@ -537,39 +543,192 @@ export default function Home() {
       {/**End ofertas nacionales */}
 
       {/**Porque reservar con tiquetes y tiquetes */}
-      <div className= "min-h-[512px] bg-[#F6F6F6] pt-12 px-24">
+      <section className="min-h-[512px] bg-[#F6F6F6] pt-12 px-24">
         <div className="text-center text-[#323237] text-[20px] font-bold uppercase pb-20">
           <p>¿Por qué reservar en tiqutes y tiquetes</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-20">
           <div className="flex flex-col justify-center items-center px-4">
             <div className="h-[60px] w-[60px] flex items-center justify-center bg-[#FFCD31] rounded-full mb-8"></div>
-            <h2 className="uppercase text-[16px] text-[#126E6E] font-bold text-center mb-4">las mejores ofertas de viaje para ti</h2>
-            <p className="text-center text-[14px] text-[#323237]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptates omnis nostrum ut aliquam earum explicabo molestiae? Totam itaque molestias quo corporis accusantium</p>
+            <h2 className="uppercase text-[16px] text-[#126E6E] font-bold text-center mb-4">
+              las mejores ofertas de viaje para ti
+            </h2>
+            <p className="text-center text-[14px] text-[#323237]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis voluptates omnis nostrum ut aliquam earum explicabo
+              molestiae? Totam itaque molestias quo corporis accusantium
+            </p>
           </div>
           <div className="flex flex-col justify-center items-center px-4">
             <div className="h-[60px] w-[60px] flex items-center justify-center bg-[#FFCD31] rounded-full mb-8"></div>
-            <h2 className="uppercase text-[16px] text-[#126E6E] font-bold text-center mb-6">100% confiables</h2>
-            <p className="text-center text-[14px] text-[#323237]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptates omnis nostrum ut aliquam earum explicabo molestiae? Totam itaque molestias quo corporis accusantium</p>
+            <h2 className="uppercase text-[16px] text-[#126E6E] font-bold text-center mb-6">
+              100% confiables
+            </h2>
+            <p className="text-center text-[14px] text-[#323237]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis voluptates omnis nostrum ut aliquam earum explicabo
+              molestiae? Totam itaque molestias quo corporis accusantium
+            </p>
           </div>
           <div className="flex flex-col justify-center items-center px-4">
             <div className="h-[60px] w-[60px] flex items-center justify-center bg-[#FFCD31] rounded-full mb-8"></div>
-            <h2 className="uppercase text-[16px] text-[#126E6E] font-bold text-center mb-4">Los mejores planes en un solo lugar</h2>
-            <p className="text-center text-[14px] text-[#323237]">Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis voluptates omnis nostrum ut aliquam earum explicabo molestiae? Totam itaque molestias quo corporis accusantiu</p>
+            <h2 className="uppercase text-[16px] text-[#126E6E] font-bold text-center mb-4">
+              Los mejores planes en un solo lugar
+            </h2>
+            <p className="text-center text-[14px] text-[#323237]">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Reiciendis voluptates omnis nostrum ut aliquam earum explicabo
+              molestiae? Totam itaque molestias quo corporis accusantiu
+            </p>
           </div>
         </div>
-
-      </div>
+      </section>
       {/**end Porque reservar con tiquetes y tiquetes */}
 
       {/**Section Slider de aerolineas */}
+      <section className="bg-white min-h-[400px] pt-[77px]">
+        <div className="text-center px-80 mb-20">
+          <h1 className="text-[#126E6E] text-[34px] font-bold uppercase">
+            Todas las opciones de viaje en un solo lugar
+          </h1>
+          <p className="text-[#323237] text-[16px] font-normal pt-4">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+            voluptates tempora sunt architecto doloremque est minus adipisci ab.
+          </p>
+        </div>
+        {/**Slider de aerolineas */}
+        <div className="flex justify-center items-center">
+          {/**icono angle-left */}
+          <div className="cursor-pointer">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="58"
+              height="58"
+              viewBox="0 0 58 58"
+            >
+              <defs>
+                <filter
+                  id="Trazado_2270"
+                  x="0"
+                  y="0"
+                  width="58"
+                  height="58"
+                  filterUnits="userSpaceOnUse"
+                >
+                  <feOffset dy="1" input="SourceAlpha" />
+                  <feGaussianBlur stdDeviation="3" result="blur" />
+                  <feFlood flood-color="#acacac" />
+                  <feComposite operator="in" in2="blur" />
+                  <feComposite in="SourceGraphic" />
+                </filter>
+              </defs>
+              <g
+                id="Grupo_1704"
+                data-name="Grupo 1704"
+                transform="translate(9 8)"
+              >
+                <g
+                  transform="matrix(1, 0, 0, 1, -9, -8)"
+                  filter="url(#Trazado_2270)"
+                >
+                  <path
+                    id="Trazado_2270-2"
+                    data-name="Trazado 2270"
+                    d="M20,0A20,20,0,1,0,40,20,20,20,0,0,0,20,0Z"
+                    transform="translate(9 8)"
+                    fill="#fff"
+                  />
+                </g>
+                <path
+                  id="Icon_ionic-ios-arrow-forward"
+                  data-name="Icon ionic-ios-arrow-forward"
+                  d="M14.349,15.193,21.16,8.387a1.281,1.281,0,0,0,0-1.817,1.3,1.3,0,0,0-1.822,0l-7.717,7.712a1.284,1.284,0,0,0-.038,1.774l7.749,7.765A1.287,1.287,0,1,0,21.155,22Z"
+                  transform="translate(3.608 4.804)"
+                  fill="#323237"
+                />
+              </g>
+            </svg>
+          </div>
+          {/**end icono angle-left */}
+          {/**Slider imagenes aerolineas */}
+          <div className="flex items-center gap-10">
+            <div className="w-[120px]">
+              <img src="static/aerolineas/4C.png" alt="latam" />
+            </div>
+            <div className="w-[150px]">
+              <img src="static/aerolineas/AV.png" alt="avianca" />
+            </div>
+            <div className="w-[180px]">
+              <img src="static/aerolineas/AA.png" alt="american airlines" />
+            </div>
+            <div className="w-[150px]">
+              <img src="static/aerolineas/VH.png" alt="viva" />
+            </div>
+            <div className="w-[150px]">
+              <img src="static/aerolineas/AF.png" alt="avianca" />
+            </div>
+            
+          </div>
+          {/**End Slider imagenes aerolineas */}
+
+          {/**Icono angle-rigth */}
+          <div className="angle-right cursor-pointer">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="58"
+              height="58"
+              viewBox="0 0 58 58"
+            >
+              <defs>
+                <filter
+                  id="Trazado_2270"
+                  x="0"
+                  y="0"
+                  width="58"
+                  height="58"
+                  filterUnits="userSpaceOnUse"
+                >
+                  <feOffset dy="1" input="SourceAlpha" />
+                  <feGaussianBlur stdDeviation="3" result="blur" />
+                  <feFlood flood-color="#acacac" />
+                  <feComposite operator="in" in2="blur" />
+                  <feComposite in="SourceGraphic" />
+                </filter>
+              </defs>
+              <g
+                id="Grupo_1704"
+                data-name="Grupo 1704"
+                transform="translate(9 8)"
+              >
+                <g
+                  transform="matrix(1, 0, 0, 1, -9, -8)"
+                  filter="url(#Trazado_2270)"
+                >
+                  <path
+                    id="Trazado_2270-2"
+                    data-name="Trazado 2270"
+                    d="M20,0A20,20,0,1,0,40,20,20,20,0,0,0,20,0Z"
+                    transform="translate(9 8)"
+                    fill="#fff"
+                  />
+                </g>
+                <path
+                  id="Icon_ionic-ios-arrow-forward"
+                  data-name="Icon ionic-ios-arrow-forward"
+                  d="M14.349,15.193,21.16,8.387a1.281,1.281,0,0,0,0-1.817,1.3,1.3,0,0,0-1.822,0l-7.717,7.712a1.284,1.284,0,0,0-.038,1.774l7.749,7.765A1.287,1.287,0,1,0,21.155,22Z"
+                  transform="translate(3.608 4.804)"
+                  fill="#323237"
+                />
+              </g>
+            </svg>
+          </div> {/**end icono angle-rigth */}
+        </div>
+        {/**end Slider de aerolineas */}
+
+        <div></div>
+      </section>
+
       {/**End section Slider de aerolineas */}
-
-
-
-
-
-      
     </div>
   );
 }
