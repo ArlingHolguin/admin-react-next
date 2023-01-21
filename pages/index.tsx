@@ -650,7 +650,6 @@ export default function Home() {
             </svg>
           </div>
           {/**end icono angle-left */}
-
           {/**Slider imagenes aerolineas */}
           <div className="flex items-center gap-10">
             <div className="w-[120px]">
@@ -667,10 +666,9 @@ export default function Home() {
             </div>
             <div className="w-[150px]">
               <img src="static/aerolineas/AF.png" alt="avianca" />
-            </div>            
+            </div>
           </div>
           {/**End Slider imagenes aerolineas */}
-
           {/**Icono angle-rigth */}
           <div className="angle-right cursor-pointer">
             <svg
@@ -721,95 +719,246 @@ export default function Home() {
                 />
               </g>
             </svg>
-          </div> {/**end icono angle-rigth */}
+          </div>{" "}
+          {/**end icono angle-rigth */}
         </div>
         {/**end Slider de aerolineas */}
-      </section>{/** End Section Slider de aerolineas */}
+      </section>
+      {/** End Section Slider de aerolineas */}
 
       {/**Section como comprar tiquetes */}
       <section className="bg-[#BCD9D9] min-h-[500px] mt-[50px] pt-[50px] px-16 relative">
         <div className="">
-          <h1 className="uppercase text-[#323237] text-[24px] font-bold">¿Cómo comprar en tiquetes y tiquetes?</h1>
+          <h1 className="uppercase text-[#323237] text-[24px] font-bold">
+            ¿Cómo comprar en tiquetes y tiquetes?
+          </h1>
         </div>
         <div className="grid grid-cols-5 gap-20 pt-[55px]">
           <div>
             <div className="bg-white rounded-md h-[288px] w-[220px] overflow-hidden ">
-              <div className="bg-[#F8F8F8] w-[47px] h-[66px] text-[28px] font-semibold text-[#323237 flex justify-center pt-[14px]">1.</div>
+              <div className="bg-[#F8F8F8] w-[47px] h-[66px] text-[28px] font-semibold text-[#323237 flex justify-center pt-[14px]">
+                1.
+              </div>
               <div className="flex justify-center items-center">
-                <img src="static/icons/icon-1.svg"/>
+                <img src="static/icons/icon-1.svg" />
               </div>
               <div className="text-[12px] text-[#323237] pt-8 px-4 ">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore molestiae aspernatur repellendus!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+                molestiae aspernatur repellendus!
               </div>
             </div>
           </div>
           <div>
             <div className="bg-white rounded-md h-[288px] w-[220px] overflow-hidden ">
-              <div className="bg-[#F8F8F8] w-[47px] h-[66px] text-[28px] font-semibold text-[#323237 flex justify-center pt-[14px]">2.</div>
+              <div className="bg-[#F8F8F8] w-[47px] h-[66px] text-[28px] font-semibold text-[#323237 flex justify-center pt-[14px]">
+                2.
+              </div>
               <div className="flex justify-center items-center">
-                <img src="static/icons/icon-2.svg"/>
+                <img src="static/icons/icon-2.svg" />
               </div>
               <div className="text-[12px] text-[#323237] pt-8 px-4 ">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore molestiae aspernatur repellendus!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+                molestiae aspernatur repellendus!
               </div>
             </div>
           </div>
           <div>
             <div className="bg-white rounded-md h-[288px] w-[220px] overflow-hidden ">
-              <div className="bg-[#F8F8F8] w-[47px] h-[66px] text-[28px] font-semibold text-[#323237 flex justify-center pt-[14px]">3.</div>
+              <div className="bg-[#F8F8F8] w-[47px] h-[66px] text-[28px] font-semibold text-[#323237 flex justify-center pt-[14px]">
+                3.
+              </div>
               <div className="flex justify-center items-center">
-                <img src="static/icons/icon-3.svg"/>
+                <img src="static/icons/icon-3.svg" />
               </div>
               <div className="text-[12px] text-[#323237] pt-8 px-4 ">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore molestiae aspernatur repellendus!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+                molestiae aspernatur repellendus!
               </div>
             </div>
           </div>
           <div>
             <div className="bg-white rounded-md h-[288px] w-[220px] overflow-hidden ">
-              <div className="bg-[#F8F8F8] w-[47px] h-[66px] text-[28px] font-semibold text-[#323237 flex justify-center pt-[14px]">4.</div>
+              <div className="bg-[#F8F8F8] w-[47px] h-[66px] text-[28px] font-semibold text-[#323237 flex justify-center pt-[14px]">
+                4.
+              </div>
               <div className="flex justify-center items-center">
-                <img src="static/icons/icon-4.svg"/>
+                <img src="static/icons/icon-4.svg" />
               </div>
               <div className="text-[12px] text-[#323237] pt-8 px-4 ">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore molestiae aspernatur repellendus!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
+                molestiae aspernatur repellendus!
               </div>
             </div>
           </div>
-         
-          <div className="">          
-          </div>
+
+          <div className=""></div>
         </div>
         <div className="absolute bottom-[-18px] right-0">
-          <img className="" src="static/img/home/section-compra-mujer.svg" alt="compra" />
+          <img
+            className=""
+            src="static/img/home/section-compra-mujer.svg"
+            alt="compra"
+          />
         </div>
+      </section>
+      {/** End Section como comprar tiquetes */}
 
-      </section>{/** End Section como comprar tiquetes */}
-
-      {/**Section */}
+      {/**Section suscriber */}
       <section className="bg-white py-20 h-[380px]">
         <div className="text-center px-96">
           <h1 className="text-[#323237] text-[24px] font-bold leading-[26px]">
-          No te pierdas la oportunidad de viajar con nuestras promociones a cualquier destino
+            No te pierdas la oportunidad de viajar con nuestras promociones a
+            cualquier destino
           </h1>
         </div>
         <div className="flex justify-center items-center my-10 gap-[16px]">
           <div>
-            <input className="w-[488px] h-[48px] rounded-md border-transparent bg-[#F1F2F6] focus:outline-none focus:border-[#EF4060] focus:ring-[#EF4060] px-4 " type="text" placeholder="Ingresa tu email" />           
+            <input
+              className="w-[488px] h-[48px] rounded-md border-transparent bg-[#F1F2F6] focus:outline-none focus:border-[#EF4060] focus:ring-[#EF4060] px-4 "
+              type="text"
+              placeholder="Ingresa tu email"
+            />
           </div>
           <div>
-            <button className="flex justify-center  items-center bg-[#EF4060] text-white rounded-md h-[48px] w-[173px] hv font-medium hvr-grow">Suscribirme
-            </button>            
+            <button className="flex justify-center  items-center bg-[#EF4060] text-white rounded-md h-[48px] w-[173px] hv font-medium hvr-grow">
+              Suscribirme
+            </button>
+          </div>
+        </div>
+        <div className="text-center px-10">
+          <p className="text-[14px]">
+            Recibirás emails promocionales de Tiquetes y Tiquetes. Para más
+            información consulta
+          </p>
+          <a
+            className=" text-[#EF4060] decoration-1 text-[14px]"
+            href="http://"
+          >
+            las políticas de privacidad.
+          </a>
+        </div>
+      </section>
+      {/**End Section suscriber */}
+
+      {/**Section footer */}
+      <footer className="bg-[#F1F2F6] pb-6">
+        <div className="relative p-8">
+          <div className="grid grid-cols-3 gap-4">
+            <div className="p-4 col-span-2">
+              <div className="grid grid-cols-2 gap-2">
+                <div>
+                  <div className="text-[24px] font-bold text-[#EF4060]">
+                    Acerca de nosotros
+                  </div>
+                  <div>
+                    <div className="text-[16px] font-normal text-[#323237]">
+                      <a href="#" className="no-underline hover:underline">
+                      Quienes somos
+                      </a>
+                    </div>
+                    <div className="text-[16px] font-normal text-[#323237]">
+                      <a href="#" className="no-underline hover:underline">
+                      Sostenibilidad
+                      </a>
+                    </div>
+                    <div className="text-[16px] font-normal text-[#323237]">
+                    <a href="#" className="no-underline hover:underline">
+                      Políticas de privacidad
+                      </a>
+                    </div>
+                    <div className="text-[16px] font-normal text-[#323237]">
+                    <a href="#" className="no-underline hover:underline">
+                      Ley de retracto 
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div className="text-[24px] font-bold text-[#EF4060]">
+                    Ayuda
+                  </div>
+                  <div>
+                    <div className="text-[16px] font-normal text-[#323237]">                      
+                      <a href="#" className="no-underline hover:underline">
+                      PQRS
+                      </a>
+                    </div>
+                    <div className="text-[16px] font-normal text-[#323237]">                     
+                      <a href="#" className="no-underline hover:underline">
+                      Preguntas frecuentes
+                      </a>
+                    </div>
+                    <div className="text-[16px] font-normal text-[#323237]">                      
+                      <a href="#" className="no-underline hover:underline">
+                      Contáctenos
+                      </a>
+                    </div>
+                    <div className="text-[16px] font-normal text-[#323237]">
+                      <a href="#" className="no-underline hover:underline">
+                        Oficina
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="p-4">
+              <div className="flex items-center gap-4 justify-end">
+                <div className="bg-[#EF4060] h-[35px] w-[35px] rounded-full flex justify-center items-center shadow-lg p-2 cursor-pointer hvr-grow">
+                  <a href="http://" target="_blank" rel="noopener noreferrer">
+                    <img src="static/icons/social/icons8-twitter.svg" alt="" />
+                  </a>
+                </div>
+                <div className="bg-[#EF4060] h-[35px] w-[35px] rounded-full flex justify-center items-center shadow-lg p-2 cursor-pointer hvr-grow">
+                  <a href="http://" target="_blank" rel="noopener noreferrer">
+                    <img src="static/icons/social/icons8-twitter.svg" alt="" />
+                  </a>
+                </div>
+                <div className="bg-[#EF4060] h-[35px] w-[35px] rounded-full flex justify-center items-center shadow-lg p-2 cursor-pointer hvr-grow">
+                  <a href="http://" target="_blank" rel="noopener noreferrer">
+                    <img src="static/icons/social/icons8-twitter.svg" alt="" />
+                  </a>
+                </div>
+                <div className="bg-[#EF4060] h-[35px] w-[35px] rounded-full flex justify-center items-center shadow-lg p-2 cursor-pointer hvr-grow">
+                  <a href="http://" target="_blank" rel="noopener noreferrer">
+                    <img src="static/icons/social/icons8-twitter.svg" alt="" />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="flex justify-between items-center pt-8 mx-14">
+          <div>
+          <img
+            className="w-[250px] mb-2"
+            src="static/img/logo.png"
+            alt="logo"
+          />
+          </div>
+          <div className="flex justify-end items-center gap-2">
+            <div>
+              <img className="w-[40px]" src="static/icons/politicas/iata-1.svg"/>
+            </div>
+            <div>
+              <img className="w-[40px]" src="static/icons/politicas/iata-1.svg"/>
+            </div>
+            <div>
+              <img className="w-[40px]" src="static/icons/politicas/iata-1.svg"/>
+            </div>
+            <div>
+              <img className="w-[40px]" src="static/icons/politicas/iata-1.svg"/>
+            </div>
           </div>
 
         </div>
-        <div className="text-center px-10">
-          <p className="text-[14px]">Recibirás emails promocionales de Tiquetes y Tiquetes. Para más información consulta</p>
-          <a className=" text-[#EF4060] text-[14px] decoration-1 text-[14px]" href="http://">las políticas de privacidad.</a>
-          </div>
-      </section>
-      
-
+        <div className="px-10 text-[10px] text-[#707070]">
+          <p>Es una marca comercial de Euro American Travel SAS</p>
+          <p>SITIO WEB DE RYC EUROAMERICAN TRAVEL SAS | NIT: 805021793-2 | RNT: 6999 Av 6 BIS 25N 22 | Colombia - Cali En desarrollo de lo dispuesto en el artículo 17 de la ley 679 de 2001, la agencia advierte al turista que la explotación y el abuso sexual de los menores de edad en el país son sancionados penal y administrativamente, conforme a las leyes Colombianas.Cumple la Ley 17 de 1981 y Res. 1367 de 2000 contra la comercialización y tráfico de especies de fauna y flora silvestre. Rechaza la comercialización y tráfico ilegal de bienes culturales regionales y nacionales, Ley 103 de 1991 y su decreto 904 de 1941, Ley 397 de 1997 y su decreto 833 de 2002, Ley 1185 de 2008. Protege los espacios libres de humo Ley 1335 de 2009. Rechaza la discriminación o actos de racismo a la población vulnerable Ley 1752 de 2015 y Ley 1482 de 2011. Los datos personales que se han recogido por medio de este canal serán tratados de conformidad con lo establecidoen la Ley 1581 de 2012.Todos los derechos reservados.</p>
+        </div>
+      </footer> 
+      {/**SEnd ection footer */}
     </div>
   );
 }
