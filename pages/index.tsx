@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div>
       {/** header menu  */}
-      <div className="px-4 sm:px-6 lg:px-8 flex items-center justify-between bg-white h-[90px] shadow drop-shadow-md text-[14px]">
+      <header className="px-4 sm:px-6 lg:px-8 flex items-center justify-between bg-white h-[90px] shadow drop-shadow-md text-[14px]">
         <div>
           <img
             className="w-[250px] mb-2"
@@ -25,7 +25,7 @@ export default function Home() {
             <div className="cursor-pointer hover:text-[#0b2b2b]">Mi perfil</div>
           </div>
           <div>|</div>
-          <div className="flex items-center">
+          {/**<div className="flex items-center">
             <div className="mr-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -53,8 +53,9 @@ export default function Home() {
                 <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
               </svg>
             </div>
-          </div>
-          <div className="flex items-center">
+          </div>*/}
+          {/**Componente traduccion y moneda */}
+          <div className="flex items-center cursor-pointer">
             <div className="mr-1 font-medium">$</div>
             <div className="mr-1">COP</div>
             <div className="bandera-colombia text-transparent mr-1">Col</div>
@@ -69,12 +70,13 @@ export default function Home() {
               </svg>
             </div>
           </div>
+          {/**end Componente traduccion y moneda */}
         </div>
-      </div>
+      </header>
       {/** header menu end  */}
 
       {/** Tabs botonera servicios */}
-      <div className="h-[74px] gap-[32px] px-6 sm:px-6 lg:px-8 flex items-center justify-start my-4 verflow-x-auto">
+      <nav className="h-[74px] gap-[32px] px-6 sm:px-6 lg:px-8 flex items-center justify-start my-4 verflow-x-auto">
         {/**Card tab vuelos */}
         <div className="w-[103px] h-[74px]  flex flex-col justify-center items-center rounded-[8px] text-[12px] font-bold shadow-md cursor-pointer hvr-grow bg-[#EF4060] text-white ">
           <div className="mb-3">
@@ -264,11 +266,11 @@ export default function Home() {
           </div>
           <div>Corporativo</div>
         </div>
-      </div>
+      </nav>
       {/** Tabs botonera servicios */}
 
       {/** Motor de busueda para los servicios */}
-      <div className="static flex flex-wrap justify-center items-center">
+      <section className="static flex flex-wrap justify-center items-center">
         {/**Card */}
         <div className="w-[1240px] h-[202px] absolute bg-white p-8 rounded-md shadow-md">
           {/**radio butons tipo de seleccion  */}
@@ -425,11 +427,11 @@ export default function Home() {
             alt=""
           />
         </div>
-      </div>
+      </section>
       {/**End motor de busqueda */}
 
-      {/**ofertas nacionales */}
-      <div className="bg-white py-6 px-12">
+      {/**section ofertas nacionales */}
+      <section className="bg-white py-6 px-12">
         <div className="mb-1">
           <p className="uppercase text-[22px] text-[#323237] font-bold">
             Ofertas Nacionales
@@ -539,7 +541,7 @@ export default function Home() {
           <div className="h-2 w-6 rounded-full bg-[#E8E8E8]"></div>
         </div>
         {/**end paginador slider  carrusel*/}
-      </div>
+      </section>
       {/**End ofertas nacionales */}
 
       {/**Porque reservar con tiquetes y tiquetes */}
