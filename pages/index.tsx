@@ -1,7 +1,12 @@
 import Header from "../components/layout/header";
+import Image from 'next/image';
+import Logo from 'public/static/img/logo.png';
+import ImageBgSectionBusqueda from 'public/static/img/home/banner/bg-section-busqueda.webp';
 import ModalTranslator from "../components/layout/translation/modalTranslator";
 import { Inter } from "@next/font/google";
 import { useState } from "react";
+import Prueba from "../components/layout/translation/prueba";
+
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -13,12 +18,20 @@ export default function Home() {
       {/** header menu  */}
       <header className="px-4 sm:px-6 lg:px-8 flex items-center justify-between bg-white h-[90px] shadow drop-shadow-md text-[14px]">
       <div>
-        <img className="w-[250px] mb-2" src="static/img/logo.png" alt="logo" />
+      <Image className="mb-2"
+        src={Logo}
+        alt="logo"
+        width={250}
+        // height={500} automatically provided
+        // blurDataURL="data:..." automatically provided
+        // placeholder="blur" // Optional blur-up while loading
+      />
+        
       </div>
       <div className="flex justify-end gap-[21px] text-[#707070] text-[14px]">
         <div className="flex gap-[21px] text-[#126E6E] font-medium">
           <div className="cursor-pointer hover:text-[#0b2b2b]">
-            Mis reservas
+            <Prueba />
           </div>
           <div className="cursor-pointer hover:text-[#0b2b2b]">Ayuda</div>
           <div className="cursor-pointer hover:text-[#0b2b2b]">Mi perfil</div>
@@ -422,11 +435,15 @@ export default function Home() {
         </div>
         {/**Card  end*/}
         <div className="h-[346px] w-full ">
-          <img
-            className="h-[346px] w-full object-center object-cover"
-            src="https://img.freepik.com/foto-gratis/paisaje-palma-tropical-vacaciones-verano_1203-5352.jpg?w=740&t=st=1673989609~exp=1673990209~hmac=a07589f31a1b5f0705220f31e39ee8c87fe87d8bec3a65b1a33098a485a3bddf"
-            alt=""
-          />
+        <Image className="h-[346px] w-full object-center object-cover"
+        src={ImageBgSectionBusqueda}
+        alt="bg"
+        // width={500} automatically provided
+        // height={500} automatically provided
+        // blurDataURL="data:..." automatically provided
+        // placeholder="blur" // Optional blur-up while loading
+        />
+          
         </div>
       </section>
       {/**End motor de busqueda */}
