@@ -1,31 +1,30 @@
-import Head from "next/head";
-import Image from "next/image";
+import Header from "../components/layout/header";
+import ModalTranslator from "../components/layout/translation/modalTranslator";
 import { Inter } from "@next/font/google";
+import { useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const [showModal, setShowModal] = useState(false);
   return (
     <div>
+      
       {/** header menu  */}
       <header className="px-4 sm:px-6 lg:px-8 flex items-center justify-between bg-white h-[90px] shadow drop-shadow-md text-[14px]">
-        <div>
-          <img
-            className="w-[250px] mb-2"
-            src="static/img/logo.png"
-            alt="logo"
-          />
-        </div>
-        <div className="flex justify-end gap-[21px] text-[#707070] text-[14px]">
-          <div className="flex gap-[21px] text-[#126E6E] font-medium">
-            <div className="cursor-pointer hover:text-[#0b2b2b]">
-              Mis reservas
-            </div>
-            <div className="cursor-pointer hover:text-[#0b2b2b]">Ayuda</div>
-            <div className="cursor-pointer hover:text-[#0b2b2b]">Mi perfil</div>
+      <div>
+        <img className="w-[250px] mb-2" src="static/img/logo.png" alt="logo" />
+      </div>
+      <div className="flex justify-end gap-[21px] text-[#707070] text-[14px]">
+        <div className="flex gap-[21px] text-[#126E6E] font-medium">
+          <div className="cursor-pointer hover:text-[#0b2b2b]">
+            Mis reservas
           </div>
-          <div>|</div>
-          {/**<div className="flex items-center">
+          <div className="cursor-pointer hover:text-[#0b2b2b]">Ayuda</div>
+          <div className="cursor-pointer hover:text-[#0b2b2b]">Mi perfil</div>
+        </div>
+        <div>|</div>
+        {/**<div className="flex items-center">
             <div className="mr-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -54,25 +53,27 @@ export default function Home() {
               </svg>
             </div>
           </div>*/}
-          {/**Componente traduccion y moneda */}
-          <div className="flex items-center cursor-pointer">
-            <div className="mr-1 font-medium">$</div>
-            <div className="mr-1">COP</div>
-            <div className="bandera-colombia text-transparent mr-1">Col</div>
-            <div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 512 512"
-                width="16"
-                height="16"
-              >
-                <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
-              </svg>
-            </div>
-          </div>
-          {/**end Componente traduccion y moneda */}
-        </div>
-      </header>
+        {/**Componente traduccion y moneda */}
+        <div className="flex items-center cursor-pointer" onClick={()=>setShowModal(true)} >
+      <div className="mr-1 font-medium">$</div>
+      <div className="mr-1">COP</div>
+      <div className="bandera-colombia text-transparent mr-1">Col</div>
+      <div>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+          width="16"
+          height="16"
+        >
+          <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+        </svg>
+      </div>
+    </div>    
+        {/**end Componente traduccion y moneda */}
+      </div>
+    </header>
+      <ModalTranslator isVisible={showModal} onClose={()=>setShowModal(false)}/>
+      
       {/** header menu end  */}
 
       {/** Tabs botonera servicios */}
