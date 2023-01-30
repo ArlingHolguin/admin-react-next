@@ -1,43 +1,64 @@
-import Header from "../components/layout/header";
-import Image from 'next/image';
-import Logo from 'public/static/img/logo.png';
-import ImageBgSectionBusqueda from 'public/static/img/home/banner/bg-section-busqueda.webp';
-import ModalTranslator from "../components/layout/translation/modalTranslator";
+import Image from "next/image";
 import { Inter } from "@next/font/google";
 import { useState } from "react";
+import Header from "../components/layout/header";
+import Logo from "public/static/img/logo.png";
+import ImageBgSectionBusqueda from "public/static/img/home/banner/bg-section-busqueda.webp";
+import ModalTranslator from "../components/layout/translation/modalTranslator";
 import Prueba from "../components/layout/translation/prueba";
+import DatePicker from "react-datepicker";
+import TabComponent from "../components/pruebas/tabComponent";
 
+import "react-datepicker/dist/react-datepicker.css";
+import { registerLocale, setDefaultLocale } from "react-datepicker";
+import es from "date-fns/locale/es";
+
+// CSS Modules, react-datepicker-cssmodules.css
+// import 'react-datepicker/dist/react-datepicker-cssmodules.css';
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const [showModal, setShowModal] = useState(false);
+  const [dateRange, setDateRange] = useState([null, null]);
+  const [startDate, endDate] = dateRange;
+  registerLocale("es", es);
+  setDefaultLocale("es");
+
+  (startDate: any, endDate :any) => {
+    endDate.setDate(endDate.getDate());
+    startDate.setDate(startDate.getDate());
+    console.log(endDate - startDate);
+  };
+  
+
+  
+
   return (
     <div>
-      
       {/** header menu  */}
       <header className="px-4 sm:px-6 lg:px-8 flex items-center justify-between bg-white h-[90px] shadow drop-shadow-md text-[14px]">
-      <div>
-      <Image className="mb-2"
-        src={Logo}
-        alt="logo"
-        width={250}
-        // height={500} automatically provided
-        // blurDataURL="data:..." automatically provided
-        // placeholder="blur" // Optional blur-up while loading
-      />
-        
-      </div>
-      <div className="flex justify-end gap-[21px] text-[#707070] text-[14px]">
-        <div className="flex gap-[21px] text-[#126E6E] font-medium">
-          <div className="cursor-pointer hover:text-[#0b2b2b]">
-            <Prueba />
-          </div>
-          <div className="cursor-pointer hover:text-[#0b2b2b]">Ayuda</div>
-          <div className="cursor-pointer hover:text-[#0b2b2b]">Mi perfil</div>
+        <div>
+          <Image
+            className="mb-2"
+            src={Logo}
+            alt="logo"
+            width={250}
+            // height={500} automatically provided
+            // blurDataURL="data:..." automatically provided
+            // placeholder="blur" // Optional blur-up while loading
+          />
         </div>
-        <div>|</div>
-        {/**<div className="flex items-center">
+        <div className="flex justify-end gap-[21px] text-[#707070] text-[14px]">
+          <div className="flex gap-[21px] text-[#126E6E] font-medium">
+            <div className="cursor-pointer hover:text-[#0b2b2b]">
+              <Prueba />
+            </div>
+            <div className="cursor-pointer hover:text-[#0b2b2b]">Ayuda</div>
+            <div className="cursor-pointer hover:text-[#0b2b2b]">Mi perfil</div>
+          </div>
+          <div>|</div>
+          {/**<div className="flex items-center">
             <div className="mr-1">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -66,27 +87,34 @@ export default function Home() {
               </svg>
             </div>
           </div>*/}
-        {/**Componente traduccion y moneda */}
-        <div className="flex items-center cursor-pointer" onClick={()=>setShowModal(true)} >
-      <div className="mr-1 font-medium">$</div>
-      <div className="mr-1">COP</div>
-      <div className="bandera-colombia text-transparent mr-1">Col</div>
-      <div>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 512 512"
-          width="16"
-          height="16"
-        >
-          <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
-        </svg>
-      </div>
-    </div>    
-        {/**end Componente traduccion y moneda */}
-      </div>
-    </header>
-      <ModalTranslator isVisible={showModal} onClose={()=>setShowModal(false)}/>
-      
+          {/**Componente traduccion y moneda */}
+          <div
+            className="flex items-center cursor-pointer"
+            onClick={() => setShowModal(true)}
+          >
+            <div className="mr-1 font-medium">$</div>
+            <div className="mr-1">COP</div>
+            <div className="bandera-colombia text-transparent mr-1">Col</div>
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+                width="16"
+                height="16"
+              >
+                <path d="M233.4 406.6c12.5 12.5 32.8 12.5 45.3 0l192-192c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L256 338.7 86.6 169.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l192 192z" />
+              </svg>
+            </div>
+          </div>
+          {/**end Componente traduccion y moneda */}
+        </div>
+      </header>
+      <TabComponent></TabComponent>
+      <ModalTranslator
+        isVisible={showModal}
+        onClose={() => setShowModal(false)}
+      />
+
       {/** header menu end  */}
 
       {/** Tabs botonera servicios */}
@@ -95,7 +123,7 @@ export default function Home() {
         <div className="w-[103px] h-[74px]  flex flex-col justify-center items-center rounded-[8px] text-[12px] font-bold shadow-md cursor-pointer hvr-grow bg-[#EF4060] text-white ">
           <div className="mb-3">
             {/**Icono Vuelos */}
-            <svg
+            <svg className="!fill-blue-500"
               xmlns="http://www.w3.org/2000/svg"
               width="28.001"
               height="28"
@@ -308,6 +336,7 @@ export default function Home() {
               </label>
             </div>
           </div>
+
           {/** End radio butons tipo de seleccion  */}
           {/**campos de busqueda */}
           <div className="flex items-center pl-6 pt-4">
@@ -319,7 +348,7 @@ export default function Home() {
                 </p>
                 <div className="flex">
                   <input
-                    className="w-full rounded-md border border-gray-200 bg-gray-200 text-[17px] text-[#707070] outline-none tracking-[0.13px]"
+                    className="w-full h-4 rounded-md border border-gray-200 bg-gray-200 text-[17px] text-[#707070] outline-none focus:ring-gray-200 focus:border-gray-200 tracking-[0.13px]"
                     type="text"
                     placeholder="Desde"
                   />
@@ -374,7 +403,7 @@ export default function Home() {
                 </p>
                 <div className="flex">
                   <input
-                    className="w-full rounded-md border-gray-200 bg-gray-200 text-[17px] text-[#707070] outline-none tracking-[0.13px]"
+                    className="w-full h-4 rounded-md border-gray-200 bg-gray-200 text-[17px] text-[#707070] outline-none  focus:ring-gray-200 focus:border-gray-200 tracking-[0.13px]"
                     type="text"
                     placeholder="Hasta"
                   />
@@ -384,23 +413,52 @@ export default function Home() {
 
             <div>
               {/* Fechas*/}
-              <div className="bg-gray-200 rounded-lg p-2 ml-2 w-[256px] h-[58px] cursor-pointer border border-transparent hover:border-[#EF4060]">
+              <div className="bg-gray-200 rounded-lg p-1 ml-2 w-[256px] h-[58px] cursor-pointer border border-transparent hover:border-[#EF4060]">
                 <p className="text-[#323237] text-[12px] uppercase tracking-[1.8px]">
                   Fechas
                 </p>
                 <div className="flex justify-between items-center">
                   <div>
-                    <input
-                      className="w-full rounded-md border-gray-200 bg-gray-200 text-[17px] text-[#707070] outline-none tracking-[0.13px]"
-                      type="text"
-                      placeholder="Ida"
-                    />
+                    <DatePicker
+                      className="w-full h-4 rounded-md border border-gray-200 bg-gray-200 text-[17px] text-[#707070] outline-none focus:ring-gray-200 focus:border-gray-200 tracking-[0.13px]"
+                      placeholderText="Ida"
+                      dateFormat="dd-MMM, yyyy"
+                      selected={startDate}
+                      selectsRange={true}
+                      startDate={startDate}
+                      endDate={endDate}
+                      minDate={new Date()}
+                      showDisabledMonthNavigation
+                      onChange={(update) => {
+                        setDateRange(update);
+                      }}
+                      preventDefault={true}
+                      monthsShown={2}
+                      isClearable={false}
+                      locale="en"                      
+                      todayButton="Hoy"
+                    >
+                      
+                      <div className="flex justify-between items-center px-3 mt-4">
+                        <div >Viaje de días </div>
+                        <div className="flex justify-end items items-center">
+                          <div className="react-datepicker__close-icon" aria-label="Close" tabIndex={-1} >
+                            <a href="">Borrar</a>
+                          </div>
+                          <div>
+                            <button className="flex justify-center items-center px-8 py-2 bg-[#EF4060] rounded text-white font-semibold ml-4">
+                              Aplicar
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </DatePicker>
                   </div>
                   <div>|</div>
                   <div className="flex justify-end ml-4">
                     <input
-                      className="w-full rounded-md border-gray-200 bg-gray-200 text-[17px] text-[#707070] outline-none tracking-[0.13px]"
-                      type="text"
+                      className="w-full h-4 rounded-md border-gray-200 bg-gray-200 text-[17px] text-[#707070] outline-none focus:ring-gray-200 focus:border-gray-200 tracking-[0.13px]"
+                      type="text" value={endDate}
                       placeholder="Vuelta"
                     />
                   </div>
@@ -411,7 +469,7 @@ export default function Home() {
 
             <div>
               {/* pasajeros*/}
-              <div className="bg-gray-200 rounded-lg p-2 ml-2 w-[167px] h-[58px] cursor-pointer border border-transparent hover:border-[#EF4060]">
+              <div className="static bg-gray-200 rounded-lg p-2 ml-2 w-[167px] h-[58px] cursor-pointer border border-transparent hover:border-[#EF4060]">
                 <p className="text-[#323237] text-[12px] uppercase tracking-[1.8px]">
                   Pasajeros
                 </p>
@@ -420,6 +478,11 @@ export default function Home() {
                     1 Persona
                   </span>
                 </div>
+              </div>
+              <div className="relative w-80 h-80 rounded bg-white shadow-lg flex z-[1000]">
+                <div className="flex items-center">Adultos</div>
+                <div className="flex items-center">Niños</div>
+                <div className="flex items-center">Infantes</div>
               </div>
             </div>
 
@@ -435,15 +498,15 @@ export default function Home() {
         </div>
         {/**Card  end*/}
         <div className="h-[346px] w-full ">
-        <Image className="h-[346px] w-full object-center object-cover"
-        src={ImageBgSectionBusqueda}
-        alt="bg"
-        // width={500} automatically provided
-        // height={500} automatically provided
-        // blurDataURL="data:..." automatically provided
-        // placeholder="blur" // Optional blur-up while loading
-        />
-          
+          <Image
+            className="h-[346px] w-full object-center object-cover"
+            src={ImageBgSectionBusqueda}
+            alt="bg"
+            // width={500} automatically provided
+            // height={500} automatically provided
+            // blurDataURL="data:..." automatically provided
+            // placeholder="blur" // Optional blur-up while loading
+          />
         </div>
       </section>
       {/**End motor de busqueda */}
@@ -465,7 +528,7 @@ export default function Home() {
                 alt="image"
               />
               <div className="absolute top-0 w-[380px] h-[253px] bg-gradient-to-t from-[#040404c9] via-purple-[#59595990] to-[#F1F1F100] "></div>
-              <div className="absolute top-4 right-4 z-50 flex justify-center items-center font-semibold h-[25px] w-[141px] uppercase bg-[#FFCD31] rounded-[4px] text-[10px]">
+              <div className="absolute top-4 right-4 z-30 flex justify-center items-center font-semibold h-[25px] w-[141px] uppercase bg-[#FFCD31] rounded-[4px] text-[10px]">
                 oferta destacada
               </div>
               <div className="absolute bottom-24 left-4 text-white z-50">
@@ -497,7 +560,7 @@ export default function Home() {
                 alt="image"
               />
               <div className="absolute top-0 w-[380px] h-[253px] bg-gradient-to-t from-[#040404c9] via-purple-[#59595990] to-[#F1F1F100] "></div>
-              <div className="absolute top-4 right-4 z-50 flex justify-center items-center font-semibold h-[25px] w-[141px] uppercase bg-[#FFCD31] rounded-[4px] text-[10px]">
+              <div className="absolute top-4 right-4  flex justify-center items-center font-semibold h-[25px] w-[141px] uppercase bg-[#FFCD31] rounded-[4px] text-[10px]">
                 oferta destacada
               </div>
               <div className="absolute bottom-24 left-4 text-white z-50">
@@ -529,7 +592,7 @@ export default function Home() {
                 alt="image"
               />
               <div className="absolute top-0 w-[380px] h-[253px] bg-gradient-to-t from-[#040404c9] via-purple-[#59595990] to-[#F1F1F100] "></div>
-              <div className="absolute top-4 right-4 z-50 flex justify-center items-center font-semibold h-[25px] w-[141px] uppercase bg-[#FFCD31] rounded-[4px] text-[10px]">
+              <div className="absolute top-4 right-4 flex justify-center items-center font-semibold h-[25px] w-[141px] uppercase bg-[#FFCD31] rounded-[4px] text-[10px]">
                 oferta destacada
               </div>
               <div className="absolute bottom-24 left-4 text-white z-50">
@@ -873,22 +936,22 @@ export default function Home() {
                   <div>
                     <div className="text-[16px] font-normal text-[#323237]">
                       <a href="#" className="no-underline hover:underline">
-                      Quienes somos
+                        Quienes somos
                       </a>
                     </div>
                     <div className="text-[16px] font-normal text-[#323237]">
                       <a href="#" className="no-underline hover:underline">
-                      Sostenibilidad
+                        Sostenibilidad
                       </a>
                     </div>
                     <div className="text-[16px] font-normal text-[#323237]">
-                    <a href="#" className="no-underline hover:underline">
-                      Políticas de privacidad
+                      <a href="#" className="no-underline hover:underline">
+                        Políticas de privacidad
                       </a>
                     </div>
                     <div className="text-[16px] font-normal text-[#323237]">
-                    <a href="#" className="no-underline hover:underline">
-                      Ley de retracto 
+                      <a href="#" className="no-underline hover:underline">
+                        Ley de retracto
                       </a>
                     </div>
                   </div>
@@ -898,19 +961,19 @@ export default function Home() {
                     Ayuda
                   </div>
                   <div>
-                    <div className="text-[16px] font-normal text-[#323237]">                      
+                    <div className="text-[16px] font-normal text-[#323237]">
                       <a href="#" className="no-underline hover:underline">
-                      PQRS
+                        PQRS
                       </a>
                     </div>
-                    <div className="text-[16px] font-normal text-[#323237]">                     
+                    <div className="text-[16px] font-normal text-[#323237]">
                       <a href="#" className="no-underline hover:underline">
-                      Preguntas frecuentes
+                        Preguntas frecuentes
                       </a>
                     </div>
-                    <div className="text-[16px] font-normal text-[#323237]">                      
+                    <div className="text-[16px] font-normal text-[#323237]">
                       <a href="#" className="no-underline hover:underline">
-                      Contáctenos
+                        Contáctenos
                       </a>
                     </div>
                     <div className="text-[16px] font-normal text-[#323237]">
@@ -951,33 +1014,60 @@ export default function Home() {
         </div>
         <div className="flex justify-between items-center pt-8 mx-14">
           <div>
-          <img
-            className="w-[250px] mb-2"
-            src="static/img/logo.png"
-            alt="logo"
-          />
+            <img
+              className="w-[250px] mb-2"
+              src="static/img/logo.png"
+              alt="logo"
+            />
           </div>
           <div className="flex justify-end items-center gap-2">
             <div>
-              <img className="w-[40px]" src="static/icons/politicas/iata-1.svg"/>
+              <img
+                className="w-[40px]"
+                src="static/icons/politicas/iata-1.svg"
+              />
             </div>
             <div>
-              <img className="w-[40px]" src="static/icons/politicas/iata-1.svg"/>
+              <img
+                className="w-[40px]"
+                src="static/icons/politicas/iata-1.svg"
+              />
             </div>
             <div>
-              <img className="w-[40px]" src="static/icons/politicas/iata-1.svg"/>
+              <img
+                className="w-[40px]"
+                src="static/icons/politicas/iata-1.svg"
+              />
             </div>
             <div>
-              <img className="w-[40px]" src="static/icons/politicas/iata-1.svg"/>
+              <img
+                className="w-[40px]"
+                src="static/icons/politicas/iata-1.svg"
+              />
             </div>
           </div>
-
         </div>
         <div className="px-10 text-[10px] text-[#707070]">
           <p>Es una marca comercial de Euro American Travel SAS</p>
-          <p>SITIO WEB DE RYC EUROAMERICAN TRAVEL SAS | NIT: 805021793-2 | RNT: 6999 Av 6 BIS 25N 22 | Colombia - Cali En desarrollo de lo dispuesto en el artículo 17 de la ley 679 de 2001, la agencia advierte al turista que la explotación y el abuso sexual de los menores de edad en el país son sancionados penal y administrativamente, conforme a las leyes Colombianas.Cumple la Ley 17 de 1981 y Res. 1367 de 2000 contra la comercialización y tráfico de especies de fauna y flora silvestre. Rechaza la comercialización y tráfico ilegal de bienes culturales regionales y nacionales, Ley 103 de 1991 y su decreto 904 de 1941, Ley 397 de 1997 y su decreto 833 de 2002, Ley 1185 de 2008. Protege los espacios libres de humo Ley 1335 de 2009. Rechaza la discriminación o actos de racismo a la población vulnerable Ley 1752 de 2015 y Ley 1482 de 2011. Los datos personales que se han recogido por medio de este canal serán tratados de conformidad con lo establecidoen la Ley 1581 de 2012.Todos los derechos reservados.</p>
+          <p>
+            SITIO WEB DE RYC EUROAMERICAN TRAVEL SAS | NIT: 805021793-2 | RNT:
+            6999 Av 6 BIS 25N 22 | Colombia - Cali En desarrollo de lo dispuesto
+            en el artículo 17 de la ley 679 de 2001, la agencia advierte al
+            turista que la explotación y el abuso sexual de los menores de edad
+            en el país son sancionados penal y administrativamente, conforme a
+            las leyes Colombianas.Cumple la Ley 17 de 1981 y Res. 1367 de 2000
+            contra la comercialización y tráfico de especies de fauna y flora
+            silvestre. Rechaza la comercialización y tráfico ilegal de bienes
+            culturales regionales y nacionales, Ley 103 de 1991 y su decreto 904
+            de 1941, Ley 397 de 1997 y su decreto 833 de 2002, Ley 1185 de 2008.
+            Protege los espacios libres de humo Ley 1335 de 2009. Rechaza la
+            discriminación o actos de racismo a la población vulnerable Ley 1752
+            de 2015 y Ley 1482 de 2011. Los datos personales que se han recogido
+            por medio de este canal serán tratados de conformidad con lo
+            establecidoen la Ley 1581 de 2012.Todos los derechos reservados.
+          </p>
         </div>
-      </footer> 
+      </footer>
       {/**SEnd ection footer */}
     </div>
   );
